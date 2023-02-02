@@ -1,4 +1,6 @@
+
 from .home_page import HomePage
+from .my_account_page import MyAccountPage
 import pytest
 from selenium.webdriver.common.by import By
 
@@ -22,7 +24,6 @@ def test_customer_can_go_to_women_tops_jackets_link_and_click(driver):
     page.open()
     page.move_mouse_to_women_tops_jackets_link_and_click()
     assert "jackets-women" in driver.current_url, "Women jackets page is not presented"
-
 
 if __name__ == '__main__':
     pytest.main()
