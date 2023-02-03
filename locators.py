@@ -17,3 +17,6 @@ class LoginPageLocators():
     INPUT_EMAIL = (By.CSS_SELECTOR, "input#email")
     INPUT_PASS = (By.CSS_SELECTOR, "input#pass")
     SIGN_IN = (By.CSS_SELECTOR,"#send2>span")
+
+class JacketsWomenLocators():
+    OLIVIA = (By.CSS_SELECTOR,"a.product-item-link")
