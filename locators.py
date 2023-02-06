@@ -19,4 +19,16 @@ class LoginPageLocators():
     SIGN_IN = (By.CSS_SELECTOR,"#send2>span")
 
 class JacketsWomenLocators():
-    OLIVIA = (By.CSS_SELECTOR,"a.product-item-link")
+    OLIVIA_NAME = (By.CSS_SELECTOR,"a.product-item-link")
+    OLIVIA_SIZE = (By.CSS_SELECTOR,"#option-label-size-143-item-168")
+    OLIVIA_COLOR = (By.CSS_SELECTOR,"#option-label-color-93-item-57")
+    BUTTON_ADD_TO_CART = (By.CSS_SELECTOR,"button.tocart>span")
+    SHOW_BASKET_WINDOW = (By.CSS_SELECTOR,".showcart")
+    VIEW_CART_PAGE = (By.CSS_SELECTOR,".viewcart>span")
+
+class CartWindowLocators():
+    NAME = (By.CSS_SELECTOR,".product-item-name>a")
+    Quantity = (By.CSS_SELECTOR,"span.count")
+    SEE_DETAILS = (By.CSS_SELECTOR, 'span.toggle')
+    SIZE = (By.CSS_SELECTOR,"dd.values:nth-child(2)")
+    COLOR = (By.CSS_SELECTOR,"dd.values:nth-child(4)")
