@@ -22,13 +22,22 @@ class JacketsWomenLocators():
     OLIVIA_NAME = (By.CSS_SELECTOR,"a.product-item-link")
     OLIVIA_SIZE = (By.CSS_SELECTOR,"#option-label-size-143-item-168")
     OLIVIA_COLOR = (By.CSS_SELECTOR,"#option-label-color-93-item-57")
-    BUTTON_ADD_TO_CART = (By.CSS_SELECTOR,"button.tocart>span")
-    SHOW_BASKET_WINDOW = (By.CSS_SELECTOR,".showcart")
+
+    BUTTON_ADD_OLIVIA_TO_CART = (By.CSS_SELECTOR,"button.tocart>span")
+    BUTTON_ADD_JUNO_TO_CART = (By.CSS_SELECTOR,"li:nth-child(2) .tocart>span")
+    SHOW_CART_WINDOW = (By.CSS_SELECTOR,".showcart")
     VIEW_CART_PAGE = (By.CSS_SELECTOR,".viewcart>span")
+
+    JUNO_NAME = (By.CSS_SELECTOR,"li:nth-child(2)  a.product-item-link")
+    JUNO_SIZE = (By.CSS_SELECTOR,"li:nth-child(2) #option-label-size-143-item-167")
+    JUNO_COLOR = (By.CSS_SELECTOR,"li:nth-child(2) #option-label-color-93-item-53")
 
 class CartWindowLocators():
     NAME = (By.CSS_SELECTOR,".product-item-name>a")
     Quantity = (By.CSS_SELECTOR,"span.count")
-    SEE_DETAILS = (By.CSS_SELECTOR, 'span.toggle')
+    SEE_DETAILS = (By.CSS_SELECTOR, (".toggle>span"))
     SIZE = (By.CSS_SELECTOR,"dd.values:nth-child(2)")
     COLOR = (By.CSS_SELECTOR,"dd.values:nth-child(4)")
+class SuccessfulMessageLOCATORS():
+    OLIVIA_MESSAGE = (By.CSS_SELECTOR,".messages>.message-success>div")
+    LINK_TO_CART_FROM_OLIVIA_MESSAGE = (By.CSS_SELECTOR,".messages>.message-success>div>a")
