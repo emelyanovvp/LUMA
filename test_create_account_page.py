@@ -1,6 +1,6 @@
-from .create_account_page import CreateAccountPage
+from .pages.create_account_page import CreateAccountPage
 import pytest
-from selenium.webdriver.common.by import By
+
 
 def test_after_registration_customer_go_to_my_account_page(driver):
     url = "https://magento.softwaretestingboard.com/customer/account/create/"

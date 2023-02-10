@@ -1,10 +1,5 @@
-import time
-from .jackets_women_page import JacketsWomenPage
-from .olivia_jacket_page import OliviaJacketPage
-from .juno_jacket_page import JunoJacketPage
-from .cart_page import CartPage
+from .pages.jackets_women_page import JacketsWomenPage
 import pytest
-from selenium.webdriver.common.by import By
 
 
 def test_customer_can_go_to_olivia_jacket_page(driver):

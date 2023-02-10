@@ -1,7 +1,6 @@
 from .base_page import BasePage
 from .olivia_jacket_page import OliviaJacketPage
 from .juno_jacket_page import JunoJacketPage
-from selenium.webdriver.common.by import By
 from .locators import JacketsWomenLocators
 from .locators import CartWindowLocators
 from .locators import SuccessfulMessageLOCATORS

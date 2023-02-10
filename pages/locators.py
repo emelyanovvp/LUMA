@@ -6,6 +6,21 @@ class HomePageLocators():
     WOMEN_LINK = (By.CSS_SELECTOR,".ui-menu-icon")
     WOMEN_TOPS_LINK = (By.CSS_SELECTOR,"a#ui-id-9>span:nth-child(2)")
     WOMEN_TOPS_JACKETS_LINK = (By.CSS_SELECTOR,"a#ui-id-11>span")
+    WHATS_NEW = (By.CSS_SELECTOR,"#ui-id-3")
+    WOMEN = (By.CSS_SELECTOR,"#ui-id-4")
+    MEN = (By.CSS_SELECTOR,"#ui-id-5")
+    GEAR = (By.CSS_SELECTOR,"#ui-id-6")
+    TRAINING = (By.CSS_SELECTOR,"#ui-id-7")
+    SALE = (By.CSS_SELECTOR,"#ui-id-8")
+
+    SHOP_NEW_YOGA = (By.CSS_SELECTOR,".action.more.button")
+    SHOP_PANTS = (By.CSS_SELECTOR,".action.more.icon")
+    SHOP_ERIN_RECOMMENDS = (By.CSS_SELECTOR,".home-erin>.content>.action.more.icon")
+    SHOP_TEES = (By.CSS_SELECTOR,".home-t-shirts>.content>.action.more.icon")
+    SHOP_PERFORMANCE = (By.CSS_SELECTOR,".home-performance>.content>.action.more.icon")
+    SHOP_ECO_FRIENDLY = (By.CSS_SELECTOR,".home-eco>.content>.action.more.icon")
+
+
 class CreateAccountLocators():
     FIRST_NAME = (By.CSS_SELECTOR,"input#firstname")
     LAST_NAME = (By.CSS_SELECTOR, "input#lastname")

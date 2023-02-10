@@ -1,7 +1,5 @@
 
 from .base_page import BasePage
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 from .my_account_page import MyAccountPage
 from .locators import CreateAccountLocators
 
