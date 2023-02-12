@@ -1,4 +1,3 @@
-
 import pytest
 from .pages.men_page import MenPage
 

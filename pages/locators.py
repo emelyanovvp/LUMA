@@ -57,3 +57,12 @@ class MenPageLocators():
     MEN_TANKS_LINK = (By.CSS_SELECTOR,".categories-menu>ul>li:nth-child(4)>a")
     MEN_PANTS_LINK = (By.CSS_SELECTOR,".categories-menu>ul:nth-child(4)>li>a")
     MEN_SHORTS_LINK = (By.CSS_SELECTOR,".categories-menu>ul:nth-child(4)>li:nth-child(2)>a")
+class WomenPageLocators():
+    WOMEN_TOPS_LINK = (By.CSS_SELECTOR, "ol>li>a")
+    WOMEN_BOTTOMS_LINK = (By.CSS_SELECTOR, "ol>li:nth-child(2)>a")
+    WOMEN_HOODIES_LINK = (By.CSS_SELECTOR, ".categories-menu>ul>li>a")
+    WOMEN_JACKETS_LINK = (By.CSS_SELECTOR, ".categories-menu>ul>li:nth-child(2)>a")
+    WOMEN_TEES_LINK = (By.CSS_SELECTOR, ".categories-menu>ul>li:nth-child(3)>a")
+    WOMEN_BRASS_LINK = (By.CSS_SELECTOR, ".categories-menu>ul>li:nth-child(4)>a")
+    WOMEN_PANTS_LINK = (By.CSS_SELECTOR, ".categories-menu>ul:nth-child(4)>li>a")
+    WOMEN_SHORTS_LINK = (By.CSS_SELECTOR, ".categories-menu>ul:nth-child(4)>li:nth-child(2)>a")
