@@ -1,5 +1,4 @@
 from selenium.webdriver.common.by import By
-
 class HomePageLocators():
     SIGN_IN_LINK = (By.CSS_SELECTOR, ".authorization-link")
     CREATE_ACCOUNT_LINK = (By.XPATH, "//a[text()='Create an Account']")
@@ -12,15 +11,12 @@ class HomePageLocators():
     GEAR = (By.CSS_SELECTOR,"#ui-id-6")
     TRAINING = (By.CSS_SELECTOR,"#ui-id-7")
     SALE = (By.CSS_SELECTOR,"#ui-id-8")
-
     SHOP_NEW_YOGA = (By.CSS_SELECTOR,".action.more.button")
     SHOP_PANTS = (By.CSS_SELECTOR,".action.more.icon")
     SHOP_ERIN_RECOMMENDS = (By.CSS_SELECTOR,".home-erin>.content>.action.more.icon")
     SHOP_TEES = (By.CSS_SELECTOR,".home-t-shirts>.content>.action.more.icon")
     SHOP_PERFORMANCE = (By.CSS_SELECTOR,".home-performance>.content>.action.more.icon")
     SHOP_ECO_FRIENDLY = (By.CSS_SELECTOR,".home-eco>.content>.action.more.icon")
-
-
 class CreateAccountLocators():
     FIRST_NAME = (By.CSS_SELECTOR,"input#firstname")
     LAST_NAME = (By.CSS_SELECTOR, "input#lastname")
@@ -32,21 +28,17 @@ class LoginPageLocators():
     INPUT_EMAIL = (By.CSS_SELECTOR, "input#email")
     INPUT_PASS = (By.CSS_SELECTOR, "input#pass")
     SIGN_IN = (By.CSS_SELECTOR,"#send2>span")
-
 class JacketsWomenLocators():
     OLIVIA_NAME = (By.CSS_SELECTOR,"a.product-item-link")
     OLIVIA_SIZE = (By.CSS_SELECTOR,"#option-label-size-143-item-168")
     OLIVIA_COLOR = (By.CSS_SELECTOR,"#option-label-color-93-item-57")
-
     BUTTON_ADD_OLIVIA_TO_CART = (By.CSS_SELECTOR,"button.tocart>span")
     BUTTON_ADD_JUNO_TO_CART = (By.CSS_SELECTOR,"li:nth-child(2) .tocart>span")
     SHOW_CART_WINDOW = (By.CSS_SELECTOR,".showcart")
     VIEW_CART_PAGE = (By.CSS_SELECTOR,".viewcart>span")
-
     JUNO_NAME = (By.CSS_SELECTOR,"li:nth-child(2)  a.product-item-link")
     JUNO_SIZE = (By.CSS_SELECTOR,"li:nth-child(2) #option-label-size-143-item-167")
     JUNO_COLOR = (By.CSS_SELECTOR,"li:nth-child(2) #option-label-color-93-item-53")
-
 class CartWindowLocators():
     NAME = (By.CSS_SELECTOR,".product-item-name>a")
     Quantity = (By.CSS_SELECTOR,"span.count")
@@ -56,3 +48,12 @@ class CartWindowLocators():
 class SuccessfulMessageLOCATORS():
     OLIVIA_MESSAGE = (By.CSS_SELECTOR,".messages>.message-success>div")
     LINK_TO_CART_FROM_OLIVIA_MESSAGE = (By.CSS_SELECTOR,".messages>.message-success>div>a")
+class MenPageLocators():
+    MEN_TOPS_LINK = (By.CSS_SELECTOR,"ol>li>a")
+    MEN_BOTTOMS_LINK =(By.CSS_SELECTOR,"ol>li:nth-child(2)>a")
+    MEN_HOODIES_LINK = (By.CSS_SELECTOR,".categories-menu>ul>li>a")
+    MEN_JACKET_LINK = (By.CSS_SELECTOR,".categories-menu>ul>li:nth-child(2)>a")
+    MEN_TEES_LINK = (By.CSS_SELECTOR,".categories-menu>ul>li:nth-child(3)>a")
+    MEN_TANKS_LINK = (By.CSS_SELECTOR,".categories-menu>ul>li:nth-child(4)>a")
+    MEN_PANTS_LINK = (By.CSS_SELECTOR,".categories-menu>ul:nth-child(4)>li>a")
+    MEN_SHORTS_LINK = (By.CSS_SELECTOR,".categories-menu>ul:nth-child(4)>li:nth-child(2)>a")

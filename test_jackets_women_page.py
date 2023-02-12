@@ -1,7 +1,5 @@
 from .pages.jackets_women_page import JacketsWomenPage
 import pytest
-
-
 def test_customer_can_go_to_olivia_jacket_page(driver):
     url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
     page = JacketsWomenPage(driver, url)

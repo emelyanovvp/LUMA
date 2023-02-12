@@ -62,42 +62,42 @@ def test_go_to_sale_page(driver):
     page.open()
     page.go_to_sale_page()
     assert "sale" in driver.current_url, "Sale page is not presented"
-@pytest.mark.smoke
+
 def test_go_to_new_yoga_page(driver):
     url = "https://magento.softwaretestingboard.com/"
     page = HomePage(driver, url)
     page.open()
     page.go_to_new_yoga_page()
     assert "yoga" in driver.current_url, "Yoga page is not presented"
-@pytest.mark.smoke
+
 def test_go_to_pants_page(driver):
     url = "https://magento.softwaretestingboard.com/"
     page = HomePage(driver, url)
     page.open()
     page.go_to_pants_page()
     assert "pants" in driver.current_url, "Pants page is not presented"
-@pytest.mark.smoke
+
 def test_go_to_erin_page(driver):
     url = "https://magento.softwaretestingboard.com/"
     page = HomePage(driver, url)
     page.open()
     page.go_to_erin_page()
     assert "erin" in driver.current_url, "Erin page is not presented"
-@pytest.mark.smoke
+
 def test_go_to_tees_page(driver):
     url = "https://magento.softwaretestingboard.com/"
     page = HomePage(driver, url)
     page.open()
     page.go_to_tees_page()
     assert "tees" in driver.current_url, "Tees page is not presented"
-@pytest.mark.smoke
+
 def test_go_to_performance_page(driver):
     url = "https://magento.softwaretestingboard.com/"
     page = HomePage(driver, url)
     page.open()
     page.go_to_performance_page()
     assert "performance" in driver.current_url, "Performance page is not presented"
-@pytest.mark.smoke
+
 def test_go_to_eco_page(driver):
     url = "https://magento.softwaretestingboard.com/"
     page = HomePage(driver, url)
