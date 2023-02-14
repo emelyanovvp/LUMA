@@ -54,14 +54,14 @@ class JacketsWomenLocators():
     BUTTON_ADD_NEVE_TO_CART = (By.CSS_SELECTOR, "li:nth-child(3) .tocart>span")
 
     NADIA_NAME = (By.CSS_SELECTOR, "li:nth-child(4)  a.product-item-link")
-    NADIA_SIZE_XS = (By.CSS_SELECTOR, "li:nth-child(3) #option-label-size-143-item-166")
-    NADIA_SIZE_S = (By.CSS_SELECTOR, "li:nth-child(3) #option-label-size-143-item-167")
-    NADIA_SIZE_M = (By.CSS_SELECTOR, "li:nth-child(3) #option-label-size-143-item-168")
-    NADIA_SIZE_L = (By.CSS_SELECTOR, "li:nth-child(3) #option-label-size-143-item-169")
-    NADIA_SIZE_XL = (By.CSS_SELECTOR, "li:nth-child(3) #option-label-size-143-item-170")
-    NADIA_COLOR_BLACK = (By.CSS_SELECTOR, "li:nth-child(3) #option-label-color-93-item-49")
-    NADIA_COLOR_ORANGE = (By.CSS_SELECTOR, "li:nth-child(3) #option-label-color-93-item-56")
-    NADIA_COLOR_YELLOW = (By.CSS_SELECTOR, "li:nth-child(3) #option-label-color-93-item-60")
+    NADIA_SIZE_XS = (By.CSS_SELECTOR, "li:nth-child(4) #option-label-size-143-item-166")
+    NADIA_SIZE_S = (By.CSS_SELECTOR, "li:nth-child(4) #option-label-size-143-item-167")
+    NADIA_SIZE_M = (By.CSS_SELECTOR, "li:nth-child(4) #option-label-size-143-item-168")
+    NADIA_SIZE_L = (By.CSS_SELECTOR, "li:nth-child(4) #option-label-size-143-item-169")
+    NADIA_SIZE_XL = (By.CSS_SELECTOR, "li:nth-child(4) #option-label-size-143-item-170")
+    NADIA_COLOR_BLACK = (By.CSS_SELECTOR, "li:nth-child(4) #option-label-color-93-item-49")
+    NADIA_COLOR_ORANGE = (By.CSS_SELECTOR, "li:nth-child(4) #option-label-color-93-item-56")
+    NADIA_COLOR_YELLOW = (By.CSS_SELECTOR, "li:nth-child(4) #option-label-color-93-item-60")
     BUTTON_ADD_NADIA_TO_CART = (By.CSS_SELECTOR, "li:nth-child(4) .tocart>span")
 
 class CartWindowLocators():

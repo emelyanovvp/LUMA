@@ -1,6 +1,8 @@
 from .base_page import BasePage
 from .olivia_jacket_page import OliviaJacketPage
 from .juno_jacket_page import JunoJacketPage
+from .neve_jacket_page import NeveJacketPage
+from .nadia_jacket_page import NadiaJacketPage
 from .locators import JacketsWomenLocators
 from .locators import CartWindowLocators
 from .locators import SuccessfulMessageLOCATORS
@@ -11,19 +13,15 @@ class JacketsWomenPage(BasePage):
     def customer_can_go_to_olivia_jacket_page(self):
         self.driver.find_element(*JacketsWomenLocators.OLIVIA_NAME).click()
         return OliviaJacketPage(driver=self.driver, url=self.driver.current_url)
-
     def customer_can_go_to_juno_jacket_page(self):
         self.driver.find_element(*JacketsWomenLocators.JUNO_NAME).click()
         return JunoJacketPage(driver=self.driver, url=self.driver.current_url)
-
-    def choose_size_and_colour_then_add_olivia_jacket_to_cart(self):
-        self.driver.find_element(*JacketsWomenLocators.OLIVIA_SIZE).click()
-        time.sleep(3)
-        self.driver.find_element(*JacketsWomenLocators.OLIVIA_COLOR).click()
-        time.sleep(3)
-        button = self.driver.find_element(*JacketsWomenLocators.BUTTON_ADD_OLIVIA_TO_CART).click()
-        time.sleep(5)
-
+    def customer_can_go_to_neve_jacket_page(self):
+        self.driver.find_element(*JacketsWomenLocators.NEVE_NAME).click()
+        return NeveJacketPage(driver=self.driver, url=self.driver.current_url)
+    def customer_can_go_to_nadia_jacket_page(self):
+        self.driver.find_element(*JacketsWomenLocators.NADIA_NAME).click()
+        return NadiaJacketPage(driver=self.driver, url=self.driver.current_url)
     def go_to_cart_page_from_successful_message(self):
         shopping_cart_link = self.driver.find_element(*SuccessfulMessageLOCATORS.LINK_TO_CART_FROM_SUCCESS_MESSAGE)
         shopping_cart_link.click()
@@ -31,7 +29,15 @@ class JacketsWomenPage(BasePage):
     def see_successful_message_after_adding_olivia_jacket(self):
         message_element = self.driver.find_element(*SuccessfulMessageLOCATORS.SUCCESS_MESSAGE)
         assert message_element.text == "You added Olivia 1/4 Zip Light Jacket to your shopping cart.", "Olivia jacket not added to cart"
-
+    def choose_size_and_colour_then_add_olivia_jacket_to_cart(self):
+        self.driver.find_element(*JacketsWomenLocators.OLIVIA_SIZE).click()
+        time.sleep(3)
+        self.driver.find_element(*JacketsWomenLocators.OLIVIA_COLOR).click()
+        time.sleep(3)
+        button = self.driver.find_element(*JacketsWomenLocators.BUTTON_ADD_OLIVIA_TO_CART).click()
+        time.sleep(5)
+        message_element = self.driver.find_element(*SuccessfulMessageLOCATORS.SUCCESS_MESSAGE)
+        assert message_element.text == "You added Olivia Jacket to your shopping cart.", "Olivia jacket not added to cart"
     def choose_size_and_colour_then_add_juno_jacket_to_cart(self):
         self.driver.find_element(*JacketsWomenLocators.JUNO_SIZE).click()
         time.sleep(3)
@@ -39,7 +45,7 @@ class JacketsWomenPage(BasePage):
         time.sleep(3)
         self.driver.find_element(*JacketsWomenLocators.BUTTON_ADD_JUNO_TO_CART).click()
         time.sleep(3)
-        message_element = self.driver.find_element(*SuccessfulMessageLOCATORS.OLIVIA_MESSAGE)
+        message_element = self.driver.find_element(*SuccessfulMessageLOCATORS.SUCCESS_MESSAGE)
         assert message_element.text == "You added Juno Jacket to your shopping cart.", "Juno jacket not added to cart"
 
     def choose_size_and_colour_then_add_neve_jacket_to_cart(self):
@@ -49,8 +55,17 @@ class JacketsWomenPage(BasePage):
         time.sleep(3)
         self.driver.find_element(*JacketsWomenLocators.BUTTON_ADD_NEVE_TO_CART).click()
         time.sleep(3)
-        message_element = self.driver.find_element(*SuccessfulMessageLOCATORS.OLIVIA_MESSAGE)
-        assert message_element.text == "You added Juno Jacket to your shopping cart.", "Juno jacket not added to cart"
+        message_element = self.driver.find_element(*SuccessfulMessageLOCATORS.SUCCESS_MESSAGE)
+        assert message_element.text == "You added Neve Studio Dance Jacket to your shopping cart.", "Juno jacket not added to cart"
+    def choose_size_and_colour_then_add_nadia_jacket_to_cart(self):
+        self.driver.find_element(*JacketsWomenLocators.NADIA_SIZE_XS).click()
+        time.sleep(3)
+        self.driver.find_element(*JacketsWomenLocators.NADIA_COLOR_BLACK).click()
+        time.sleep(3)
+        self.driver.find_element(*JacketsWomenLocators.BUTTON_ADD_NADIA_TO_CART).click()
+        time.sleep(3)
+        message_element = self.driver.find_element(*SuccessfulMessageLOCATORS.SUCCESS_MESSAGE)
+        assert message_element.text == "You added Nadia Elements Shell to your shopping cart.", "Nadia jacket not added to cart"
     def go_to_cart_window(self):
         self.driver.find_element(*JacketsWomenLocators.SHOW_CART_WINDOW).click()
         time.sleep(3)
