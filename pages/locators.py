@@ -29,16 +29,41 @@ class LoginPageLocators():
     INPUT_PASS = (By.CSS_SELECTOR, "input#pass")
     SIGN_IN = (By.CSS_SELECTOR,"#send2>span")
 class JacketsWomenLocators():
+    SHOW_CART_WINDOW = (By.CSS_SELECTOR, ".showcart")
+    VIEW_CART_PAGE = (By.CSS_SELECTOR, ".viewcart>span")
+
     OLIVIA_NAME = (By.CSS_SELECTOR,"a.product-item-link")
     OLIVIA_SIZE = (By.CSS_SELECTOR,"#option-label-size-143-item-168")
     OLIVIA_COLOR = (By.CSS_SELECTOR,"#option-label-color-93-item-57")
     BUTTON_ADD_OLIVIA_TO_CART = (By.CSS_SELECTOR,"button.tocart>span")
-    BUTTON_ADD_JUNO_TO_CART = (By.CSS_SELECTOR,"li:nth-child(2) .tocart>span")
-    SHOW_CART_WINDOW = (By.CSS_SELECTOR,".showcart")
-    VIEW_CART_PAGE = (By.CSS_SELECTOR,".viewcart>span")
+
     JUNO_NAME = (By.CSS_SELECTOR,"li:nth-child(2)  a.product-item-link")
     JUNO_SIZE = (By.CSS_SELECTOR,"li:nth-child(2) #option-label-size-143-item-167")
     JUNO_COLOR = (By.CSS_SELECTOR,"li:nth-child(2) #option-label-color-93-item-53")
+    BUTTON_ADD_JUNO_TO_CART = (By.CSS_SELECTOR, "li:nth-child(2) .tocart>span")
+
+    NEVE_NAME = (By.CSS_SELECTOR, "li:nth-child(3)  a.product-item-link")
+    NEVE_SIZE_XS = (By.CSS_SELECTOR, "li:nth-child(3) #option-label-size-143-item-166")
+    NEVE_SIZE_S = (By.CSS_SELECTOR, "li:nth-child(3) #option-label-size-143-item-167")
+    NEVE_SIZE_M = (By.CSS_SELECTOR, "li:nth-child(3) #option-label-size-143-item-168")
+    NEVE_SIZE_L = (By.CSS_SELECTOR, "li:nth-child(3) #option-label-size-143-item-169")
+    NEVE_SIZE_XL = (By.CSS_SELECTOR, "li:nth-child(3) #option-label-size-143-item-170")
+    NEVE_COLOR_BLACK = (By.CSS_SELECTOR, "li:nth-child(3) #option-label-color-93-item-49")
+    NEVE_COLOR_BLUE = (By.CSS_SELECTOR, "li:nth-child(3) #option-label-color-93-item-50")
+    NEVE_COLOR_ORANGE = (By.CSS_SELECTOR, "li:nth-child(3) #option-label-color-93-item-56")
+    BUTTON_ADD_NEVE_TO_CART = (By.CSS_SELECTOR, "li:nth-child(3) .tocart>span")
+
+    NADIA_NAME = (By.CSS_SELECTOR, "li:nth-child(4)  a.product-item-link")
+    NADIA_SIZE_XS = (By.CSS_SELECTOR, "li:nth-child(3) #option-label-size-143-item-166")
+    NADIA_SIZE_S = (By.CSS_SELECTOR, "li:nth-child(3) #option-label-size-143-item-167")
+    NADIA_SIZE_M = (By.CSS_SELECTOR, "li:nth-child(3) #option-label-size-143-item-168")
+    NADIA_SIZE_L = (By.CSS_SELECTOR, "li:nth-child(3) #option-label-size-143-item-169")
+    NADIA_SIZE_XL = (By.CSS_SELECTOR, "li:nth-child(3) #option-label-size-143-item-170")
+    NADIA_COLOR_BLACK = (By.CSS_SELECTOR, "li:nth-child(3) #option-label-color-93-item-49")
+    NADIA_COLOR_ORANGE = (By.CSS_SELECTOR, "li:nth-child(3) #option-label-color-93-item-56")
+    NADIA_COLOR_YELLOW = (By.CSS_SELECTOR, "li:nth-child(3) #option-label-color-93-item-60")
+    BUTTON_ADD_NADIA_TO_CART = (By.CSS_SELECTOR, "li:nth-child(4) .tocart>span")
+
 class CartWindowLocators():
     NAME = (By.CSS_SELECTOR,".product-item-name>a")
     Quantity = (By.CSS_SELECTOR,"span.count")
@@ -46,8 +71,8 @@ class CartWindowLocators():
     SIZE = (By.CSS_SELECTOR,"dd.values:nth-child(2)")
     COLOR = (By.CSS_SELECTOR,"dd.values:nth-child(4)")
 class SuccessfulMessageLOCATORS():
-    OLIVIA_MESSAGE = (By.CSS_SELECTOR,".messages>.message-success>div")
-    LINK_TO_CART_FROM_OLIVIA_MESSAGE = (By.CSS_SELECTOR,".messages>.message-success>div>a")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR,".messages>.message-success>div")
+    LINK_TO_CART_FROM_SUCCESS_MESSAGE = (By.CSS_SELECTOR,".messages>.message-success>div>a")
 class MenPageLocators():
     MEN_TOPS_LINK = (By.CSS_SELECTOR,"ol>li>a")
     MEN_BOTTOMS_LINK =(By.CSS_SELECTOR,"ol>li:nth-child(2)>a")
