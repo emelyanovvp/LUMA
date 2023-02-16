@@ -9,6 +9,7 @@ from .locators import SuccessfulMessageLOCATORS
 from .cart_page import CartPage
 import time
 
+
 class JacketsWomenPage(BasePage):
     def customer_can_go_to_olivia_jacket_page(self):
         self.driver.find_element(*JacketsWomenLocators.OLIVIA_NAME).click()
@@ -30,18 +31,18 @@ class JacketsWomenPage(BasePage):
         message_element = self.driver.find_element(*SuccessfulMessageLOCATORS.SUCCESS_MESSAGE)
         assert message_element.text == "You added Olivia 1/4 Zip Light Jacket to your shopping cart.", "Olivia jacket not added to cart"
     def choose_size_and_colour_then_add_olivia_jacket_to_cart(self):
-        self.driver.find_element(*JacketsWomenLocators.OLIVIA_SIZE).click()
+        self.driver.find_element(*JacketsWomenLocators.OLIVIA_SIZE_M).click()
         time.sleep(3)
-        self.driver.find_element(*JacketsWomenLocators.OLIVIA_COLOR).click()
+        self.driver.find_element(*JacketsWomenLocators.OLIVIA_COLOR_PURPLE).click()
         time.sleep(3)
         button = self.driver.find_element(*JacketsWomenLocators.BUTTON_ADD_OLIVIA_TO_CART).click()
         time.sleep(5)
         message_element = self.driver.find_element(*SuccessfulMessageLOCATORS.SUCCESS_MESSAGE)
         assert message_element.text == "You added Olivia Jacket to your shopping cart.", "Olivia jacket not added to cart"
     def choose_size_and_colour_then_add_juno_jacket_to_cart(self):
-        self.driver.find_element(*JacketsWomenLocators.JUNO_SIZE).click()
+        self.driver.find_element(*JacketsWomenLocators.JUNO_SIZE_S).click()
         time.sleep(3)
-        self.driver.find_element(*JacketsWomenLocators.JUNO_COLOR).click()
+        self.driver.find_element(*JacketsWomenLocators.JUNO_COLOR_GREEN).click()
         time.sleep(3)
         self.driver.find_element(*JacketsWomenLocators.BUTTON_ADD_JUNO_TO_CART).click()
         time.sleep(3)
@@ -66,30 +67,95 @@ class JacketsWomenPage(BasePage):
         time.sleep(3)
         message_element = self.driver.find_element(*SuccessfulMessageLOCATORS.SUCCESS_MESSAGE)
         assert message_element.text == "You added Nadia Elements Shell to your shopping cart.", "Nadia jacket not added to cart"
+
     def go_to_cart_window(self):
         self.driver.find_element(*JacketsWomenLocators.SHOW_CART_WINDOW).click()
         time.sleep(3)
-
     def go_to_cart_page_from_cart_window(self):
         show_cart = self.driver.find_element(*JacketsWomenLocators.VIEW_CART_PAGE).click()
         return CartPage(driver=self.driver, url=self.driver.current_url)
-
     def check_jacket_name_in_cart(self):
         name_element = self.driver.find_element(*CartWindowLocators.NAME)
         assert name_element.text == "Olivia 1/4 Zip Light Jacket", "Olivia name is not presented in cart"
-
     def check_quantity_of_jackets_in_cart(self):
         quantity_element = self.driver.find_element(*CartWindowLocators.Quantity)
         assert quantity_element.text == '1', "Quantity of jackets is not 1"
-
     def check_size_of_jacket_in_cart(self):
         button_see_details = self.driver.find_element(*CartWindowLocators.SEE_DETAILS).click()
         size_element = self.driver.find_element(*CartWindowLocators.SIZE)
         assert size_element.text == "M", "Size M is not presented in cart"
-
     def check_color_of_jacket_in_cart(self):
         button_see_details = self.driver.find_element(*CartWindowLocators.SEE_DETAILS).click()
         color_element = self.driver.find_element(*CartWindowLocators.COLOR)
         assert color_element.text == "Purple", "Purple jacket is not presented in cart"
+
+    def all_size_and_color_buttons_should_be_clickable_for_olivia_jacket(self):
+        assert self.is_element_clickable(*JacketsWomenLocators.OLIVIA_SIZE_XS), \
+            "XS button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.OLIVIA_SIZE_S), \
+            "S button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.OLIVIA_SIZE_M), \
+            "M button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.OLIVIA_SIZE_L), \
+            "L button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.OLIVIA_SIZE_XL), \
+            "XL button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.OLIVIA_COLOR_BLACK), \
+            "Black button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.OLIVIA_COLOR_BLUE), \
+            "Blue button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.OLIVIA_COLOR_PURPLE),\
+            "Purple button is not clickable"
+    def all_size_and_color_buttons_should_be_clickable_for_juno_jacket(self):
+        assert self.is_element_clickable(*JacketsWomenLocators.JUNO_SIZE_XS), \
+            "XS button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.JUNO_SIZE_S), \
+            "S button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.JUNO_SIZE_M), \
+            "M button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.JUNO_SIZE_L), \
+            "L button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.JUNO_SIZE_XL), \
+            "XL button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.JUNO_COLOR_BLUE), \
+            "Blue button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.JUNO_COLOR_GREEN), \
+            "Green button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.JUNO_COLOR_PURPLE),\
+            "Purple button is not clickable"
+    def all_size_and_color_buttons_should_be_clickable_for_neve_jacket(self):
+        assert self.is_element_clickable(*JacketsWomenLocators.NEVE_SIZE_XS), \
+            "XS button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.NEVE_SIZE_S), \
+            "S button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.NEVE_SIZE_M), \
+            "M button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.NEVE_SIZE_L), \
+            "L button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.NEVE_SIZE_XL), \
+            "XL button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.NEVE_COLOR_BLACK), \
+            "Black button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.NEVE_COLOR_BLUE), \
+            "Blue button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.NEVE_COLOR_ORANGE),\
+            "Orange button is not clickable"
+    def all_size_and_color_buttons_should_be_clickable_for_nadia_jacket(self):
+        assert self.is_element_clickable(*JacketsWomenLocators.NADIA_SIZE_XS), \
+            "XS button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.NADIA_SIZE_S), \
+            "S button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.NADIA_SIZE_M), \
+            "M button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.NADIA_SIZE_L), \
+            "L button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.NADIA_SIZE_XL), \
+            "XL button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.NADIA_COLOR_BLACK), \
+            "Black button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.NADIA_COLOR_ORANGE), \
+            "Orange button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.NADIA_COLOR_YELLOW),\
+            "Yellow button is not clickable"
 
 
