@@ -158,4 +158,143 @@ class JacketsWomenPage(BasePage):
         assert self.is_element_clickable(*JacketsWomenLocators.NADIA_COLOR_YELLOW),\
             "Yellow button is not clickable"
 
+    def all_size_and_color_buttons_should_be_clickable_for_jade_jacket(self):
+        assert self.is_element_clickable(*JacketsWomenLocators.JADE_SIZE_XS), \
+            "XS button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.JADE_SIZE_S), \
+            "S button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.JADE_SIZE_M), \
+            "M button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.JADE_SIZE_L), \
+            "L button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.JADE_SIZE_XL), \
+            "XL button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.JADE_COLOR_BLUE), \
+            "Blue button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.JADE_COLOR_GRAY), \
+            "Gray button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.JADE_COLOR_GREEN),\
+            "Green button is not clickable"
+    def all_size_and_color_buttons_should_be_clickable_for_adrienne_jacket(self):
+        assert self.is_element_clickable(*JacketsWomenLocators.ADRIENNE_SIZE_XS), \
+            "XS button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.ADRIENNE_SIZE_S), \
+            "S button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.ADRIENNE_SIZE_M), \
+            "M button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.ADRIENNE_SIZE_L), \
+            "L button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.ADRIENNE_SIZE_XL), \
+            "XL button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.ADRIENNE_COLOR_GRAY), \
+            "Gray button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.ADRIENNE_COLOR_ORANGE), \
+            "Orange button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.ADRIENNE_COLOR_PURPLE),\
+            "Purple button is not clickable"
+    def all_size_and_color_buttons_should_be_clickable_for_inez_jacket(self):
+        assert self.is_element_clickable(*JacketsWomenLocators.INEZ_SIZE_XS), \
+            "XS button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.INEZ_SIZE_S), \
+            "S button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.INEZ_SIZE_M), \
+            "M button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.INEZ_SIZE_L), \
+            "L button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.INEZ_SIZE_XL), \
+            "XL button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.INEZ_COLOR_ORANGE), \
+            "Orange button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.INEZ_COLOR_PURPLE), \
+            "Purple button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.INEZ_COLOR_RED),\
+            "Red button is not clickable"
+    def all_size_and_color_buttons_should_be_clickable_for_riona_jacket(self):
+        assert self.is_element_clickable(*JacketsWomenLocators.RIONA_SIZE_XS), \
+            "XS button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.RIONA_SIZE_S), \
+            "S button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.RIONA_SIZE_M), \
+            "M button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.RIONA_SIZE_L), \
+            "L button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.RIONA_SIZE_XL), \
+            "XL button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.RIONA_COLOR_BROWN), \
+            "Brown button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.RIONA_COLOR_GREEN), \
+            "Green button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.RIONA_COLOR_RED),\
+            "Red button is not clickable"
+    def all_size_and_color_buttons_should_be_clickable_for_ingrid_jacket(self):
+        assert self.is_element_clickable(*JacketsWomenLocators.INGRID_SIZE_XS), \
+            "XS button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.INGRID_SIZE_S), \
+            "S button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.INGRID_SIZE_M), \
+            "M button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.INGRID_SIZE_L), \
+            "L button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.INGRID_SIZE_XL), \
+            "XL button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.INGRID_COLOR_ORANGE), \
+            "Orange button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.INGRID_COLOR_RED), \
+            "Red button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.INGRID_COLOR_WHITE),\
+            "White button is not clickable"
+    def all_size_and_color_buttons_should_be_clickable_for_augusta_jacket(self):
+        assert self.is_element_clickable(*JacketsWomenLocators.AUGUSTA_SIZE_XS), \
+            "XS button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.AUGUSTA_SIZE_S), \
+            "S button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.AUGUSTA_SIZE_M), \
+            "M button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.AUGUSTA_SIZE_L), \
+            "L button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.AUGUSTA_SIZE_XL), \
+            "XL button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.AUGUSTA_COLOR_BLUE), \
+            "Blue button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.AUGUSTA_COLOR_ORANGE), \
+            "Orange button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.AUGUSTA_COLOR_RED),\
+            "Red button is not clickable"
+    def all_size_and_color_buttons_should_be_clickable_for_josie_jacket(self):
+        assert self.is_element_clickable(*JacketsWomenLocators.JOSIE_SIZE_XS), \
+            "XS button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.JOSIE_SIZE_S), \
+            "S button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.JOSIE_SIZE_M), \
+            "M button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.JOSIE_SIZE_L), \
+            "L button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.JOSIE_SIZE_XL), \
+            "XL button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.JOSIE_COLOR_BLACK), \
+            "Black button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.JOSIE_COLOR_BLUE), \
+            "Blue button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.JOSIE_COLOR_GRAY),\
+            "Gray button is not clickable"
+
+    def all_size_and_color_buttons_should_be_clickable_for_stellar_jacket(self):
+        assert self.is_element_clickable(*JacketsWomenLocators.STELLAR_SIZE_S), \
+            "S button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.STELLAR_SIZE_M), \
+            "M button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.STELLAR_SIZE_L), \
+            "L button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.STELLAR_COLOR_BLUE), \
+            "Blue button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.STELLAR_COLOR_RED), \
+            "Red button is not clickable"
+        assert self.is_element_clickable(*JacketsWomenLocators.STELLAR_COLOR_YELLOW), \
+            "Yellow button is not clickable"
+
+
+
+
+
+
 

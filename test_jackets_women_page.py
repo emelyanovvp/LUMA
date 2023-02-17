@@ -85,31 +85,84 @@ def test_should_be_proper_color_of_jacket(driver):
     page.choose_size_and_colour_then_add_olivia_jacket_to_cart()
     page.go_to_cart_window()
     page.check_color_of_jacket_in_cart()
-@pytest.mark.smoke
+
 def test_all_size_and_color_buttons_should_be_clickable_for_olivia_jacket(driver):
     url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
     page = JacketsWomenPage(driver, url)
     page.open()
     page.all_size_and_color_buttons_should_be_clickable_for_olivia_jacket()
-@pytest.mark.smoke
+
 def test_all_size_and_color_buttons_should_be_clickable_for_juno_jacket(driver):
     url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
     page = JacketsWomenPage(driver, url)
     page.open()
     page.all_size_and_color_buttons_should_be_clickable_for_juno_jacket()
-@pytest.mark.smoke
+
 def test_all_size_and_color_buttons_should_be_clickable_for_neve_jacket(driver):
     url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
     page = JacketsWomenPage(driver, url)
     page.open()
     page.all_size_and_color_buttons_should_be_clickable_for_neve_jacket()
-@pytest.mark.smoke
+
 def test_all_size_and_color_buttons_should_be_clickable_for_nadia_jacket(driver):
     url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
     page = JacketsWomenPage(driver, url)
     page.open()
     page.all_size_and_color_buttons_should_be_clickable_for_nadia_jacket()
+@pytest.mark.smoke
+def test_all_size_and_color_buttons_should_be_clickable_for_jade_jacket(driver):
+    url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
+    page = JacketsWomenPage(driver, url)
+    page.open()
+    page.all_size_and_color_buttons_should_be_clickable_for_jade_jacket()
+@pytest.mark.smoke
+def test_all_size_and_color_buttons_should_be_clickable_for_adrienne_jacket(driver):
+    url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
+    page = JacketsWomenPage(driver, url)
+    page.open()
+    page.all_size_and_color_buttons_should_be_clickable_for_adrienne_jacket()
 
+@pytest.mark.smoke
+def test_all_size_and_color_buttons_should_be_clickable_for_inez_jacket(driver):
+    url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
+    page = JacketsWomenPage(driver, url)
+    page.open()
+    page.all_size_and_color_buttons_should_be_clickable_for_inez_jacket()
+
+@pytest.mark.smoke
+def test_all_size_and_color_buttons_should_be_clickable_for_riona_jacket(driver):
+    url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
+    page = JacketsWomenPage(driver, url)
+    page.open()
+    page.all_size_and_color_buttons_should_be_clickable_for_riona_jacket()
+
+@pytest.mark.smoke
+def test_all_size_and_color_buttons_should_be_clickable_for_ingrid_jacket(driver):
+    url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
+    page = JacketsWomenPage(driver, url)
+    page.open()
+    page.all_size_and_color_buttons_should_be_clickable_for_ingrid_jacket()
+
+@pytest.mark.smoke
+def test_all_size_and_color_buttons_should_be_clickable_for_augusta_jacket(driver):
+    url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
+    page = JacketsWomenPage(driver, url)
+    page.open()
+    page.all_size_and_color_buttons_should_be_clickable_for_augusta_jacket()
+
+@pytest.mark.smoke
+def test_all_size_and_color_buttons_should_be_clickable_for_josie_jacket(driver):
+    url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
+    page = JacketsWomenPage(driver, url)
+    page.open()
+    page.all_size_and_color_buttons_should_be_clickable_for_josie_jacket()
+
+@pytest.mark.smoke
+def test_all_size_and_color_buttons_should_be_clickable_for_stellar_jacket(driver):
+    url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
+    page = JacketsWomenPage(driver, url)
+    page.open()
+    page.all_size_and_color_buttons_should_be_clickable_for_stellar_jacket()
 
 if __name__ == "__main__":
     pytest.main()
