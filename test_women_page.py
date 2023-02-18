@@ -31,12 +31,12 @@ def test_go_to_tees_women_page(driver):
     page.open()
     page.go_to_tees_women_page()
     assert "tees-women" in driver.current_url , "Tees women page is not presented"
-def test_go_to_brass_women_page(driver):
+def test_go_to_bras_women_page(driver):
     url = "https://magento.softwaretestingboard.com/women.html"
     page = WomenPage(driver, url)
     page.open()
-    page.go_to_brass_women_page()
-    assert "tanks-women" in driver.current_url , "Brass women page is not presented"
+    page.go_to_bras_women_page()
+    assert "tanks-women" in driver.current_url , "Bras women page is not presented"
 def test_go_to_pants_women_page(driver):
     url = "https://magento.softwaretestingboard.com/women.html"
     page = WomenPage(driver, url)

@@ -5,7 +5,7 @@ from .bottoms_women_page import BottomsWomenPage
 from .hoodies_women_page import HoodiesWomenPage
 from .jackets_women_page import JacketsWomenPage
 from .tees_women_page import TeesWomenPage
-from .brass_women_page import BrassWomenPage
+from .bras_women_page import BrasWomenPage
 from .pants_women_page import PantsWomenPage
 from .shorts_women_page import ShortsWomenPage
 class WomenPage(BasePage):
@@ -24,8 +24,8 @@ class WomenPage(BasePage):
     def go_to_tees_women_page(self):
         self.driver.find_element(*WomenPageLocators.WOMEN_TEES_LINK).click()
         return TeesWomenPage(driver=self.driver, url=self.driver.current_url)
-    def go_to_brass_women_page(self):
-        self.driver.find_element(*WomenPageLocators.WOMEN_BRASS_LINK).click()
+    def go_to_bras_women_page(self):
+        self.driver.find_element(*WomenPageLocators.WOMEN_BRAS_LINK).click()
         return BrassWomenPage(driver=self.driver, url=self.driver.current_url)
     def go_to_pants_women_page(self):
         self.driver.find_element(*WomenPageLocators.WOMEN_PANTS_LINK).click()

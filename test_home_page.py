@@ -1,5 +1,6 @@
 from .pages.home_page import HomePage
 import pytest
+
 def test_customer_can_go_to_login_page_from_sign_in_link(driver):
     url = "https://magento.softwaretestingboard.com/"
     home_page = HomePage(driver, url)
@@ -14,12 +15,80 @@ def test_customer_can_go_to_regform_page_from_create_account_link(driver):
     page.click_link_create_account_and_go_to_regform_page()
     assert "create" in driver.current_url, "Registration form page is not presented"
 
-def test_customer_can_go_to_women_tops_jackets_link_and_click(driver):
+
+@pytest.mark.smoke
+def test_go_to_women_page(driver):
     url = "https://magento.softwaretestingboard.com/"
     page = HomePage(driver, url)
     page.open()
-    page.move_mouse_to_women_tops_jackets_link_and_click()
+    page.go_to_women_page()
+    assert "women" in driver.current_url, "Women page is not presented"
+
+@pytest.mark.smoke
+def test_can_go_to_women_tops_page_from_home_page(driver):
+    url = "https://magento.softwaretestingboard.com/"
+    page = HomePage(driver, url)
+    page.open()
+    page.go_to_women_tops_page_from_home_page()
+    assert "tops-women" in driver.current_url, "Women tops page is not presented"
+@pytest.mark.smoke
+def test_can_go_to_women_jackets_page_from_home_page(driver):
+    url = "https://magento.softwaretestingboard.com/"
+    page = HomePage(driver, url)
+    page.open()
+    page.go_to_women_jackets_page_from_home_page()
     assert "jackets-women" in driver.current_url, "Women jackets page is not presented"
+
+@pytest.mark.smoke
+def test_can_go_to_women_hoodies_page_from_home_page(driver):
+    url = "https://magento.softwaretestingboard.com/"
+    page = HomePage(driver, url)
+    page.open()
+    page.go_to_women_hoodies_page_from_home_page()
+    assert "hoodies-and-sweatshirts-women" in driver.current_url, "Women hoodies page is not presented"
+
+
+@pytest.mark.smoke
+def test_can_go_to_women_tees_page_from_home_page(driver):
+    url = "https://magento.softwaretestingboard.com/"
+    page = HomePage(driver, url)
+    page.open()
+    page.go_to_women_tees_page_from_home_page()
+    assert "tees-women" in driver.current_url, "Women hoodies page is not presented"
+
+@pytest.mark.smoke
+def test_can_go_to_women_bras_page_from_home_page(driver):
+    url = "https://magento.softwaretestingboard.com/"
+    page = HomePage(driver, url)
+    page.open()
+    page.go_to_women_bras_page_from_home_page()
+    assert "tanks-women" in driver.current_url, "Women bras page is not presented"
+
+@pytest.mark.smoke
+def test_can_go_to_women_bottoms_page_from_home_page(driver):
+    url = "https://magento.softwaretestingboard.com/"
+    page = HomePage(driver, url)
+    page.open()
+    page.go_to_women_bottoms_page_from_home_page()
+    assert "bottoms-women" in driver.current_url, "Women bottoms page is not presented"
+
+@pytest.mark.smoke
+def test_can_go_to_women_pants_page_from_home_page(driver):
+    url = "https://magento.softwaretestingboard.com/"
+    page = HomePage(driver, url)
+    page.open()
+    page.go_to_women_pants_page_from_home_page()
+    assert "pants-women" in driver.current_url, "Women pants page is not presented"
+
+@pytest.mark.smoke
+def test_can_go_to_women_shorts_page_from_home_page(driver):
+    url = "https://magento.softwaretestingboard.com/"
+    page = HomePage(driver, url)
+    page.open()
+    page.go_to_women_shorts_page_from_home_page()
+    assert "shorts-women" in driver.current_url, "Women shorts page is not presented"
+
+
 
 def test_go_to_whats_new_page(driver):
     url = "https://magento.softwaretestingboard.com/"
@@ -35,12 +104,7 @@ def test_go_to_men_page(driver):
     page.go_to_men_page()
     assert "men" in driver.current_url, "Men page is not presented"
 
-def test_go_to_women_page(driver):
-    url = "https://magento.softwaretestingboard.com/"
-    page = HomePage(driver, url)
-    page.open()
-    page.go_to_women_page()
-    assert "women" in driver.current_url, "Women page is not presented"
+
 
 def test_go_to_gear_page(driver):
     url = "https://magento.softwaretestingboard.com/"
