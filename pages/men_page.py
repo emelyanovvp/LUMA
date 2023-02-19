@@ -11,28 +11,28 @@ from .shorts_men_page import ShortsMenPage
 
 class MenPage(BasePage):
     def go_to_tops_men_page(self):
-        self.driver.find_element(*MenPageLocators.MEN_TOPS_LINK).click()
+        self.driver.find_element(*MenPageLocators.MEN_TOPS_LINK_LEFT_BAR).click()
         return TopsMenPage(driver=self.driver, url=self.driver.current_url)
     def go_to_bottoms_men_page(self):
-        self.driver.find_element(*MenPageLocators.MEN_BOTTOMS_LINK).click()
+        self.driver.find_element(*MenPageLocators.MEN_BOTTOMS_LINK_LEFT_BAR).click()
         return BottomsMenPage(driver=self.driver, url=self.driver.current_url)
     def go_to_hoodies_men_page(self):
-        self.driver.find_element(*MenPageLocators.MEN_HOODIES_LINK).click()
+        self.driver.find_element(*MenPageLocators.MEN_HOODIES_LINK_LEFT_BAR).click()
         return HoodiesMenPage(driver=self.driver, url=self.driver.current_url)
     def go_to_jackets_men_page(self):
-        self.driver.find_element(*MenPageLocators.MEN_JACKET_LINK).click()
+        self.driver.find_element(*MenPageLocators.MEN_JACKET_LINK_LEFT_BAR).click()
         return JacketMenPage(driver=self.driver, url=self.driver.current_url)
     def go_to_tees_men_page(self):
-        self.driver.find_element(*MenPageLocators.MEN_TEES_LINK).click()
+        self.driver.find_element(*MenPageLocators.MEN_TEES_LINK_LEFT_BAR).click()
         return TeesMenPage(driver=self.driver, url=self.driver.current_url)
     def go_to_tanks_men_page(self):
-        self.driver.find_element(*MenPageLocators.MEN_TANKS_LINK).click()
+        self.driver.find_element(*MenPageLocators.MEN_TANKS_LINK_LEFT_BAR).click()
         return TanksMenPage(driver=self.driver, url=self.driver.current_url)
     def go_to_pants_men_page(self):
-        self.driver.find_element(*MenPageLocators.MEN_PANTS_LINK).click()
+        self.driver.find_element(*MenPageLocators.MEN_PANTS_LINK_LEFT_BAR).click()
         return PantsMenPage(driver=self.driver, url=self.driver.current_url)
     def go_to_shorts_men_page(self):
-        self.driver.find_element(*MenPageLocators.MEN_SHORTS_LINK).click()
+        self.driver.find_element(*MenPageLocators.MEN_SHORTS_LINK_LEFT_BAR).click()
         return ShortsMenPage(driver=self.driver, url=self.driver.current_url)
 
 
