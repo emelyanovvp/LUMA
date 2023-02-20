@@ -2,7 +2,8 @@ import time
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-
+from selenium.webdriver.common.by import By
+from .locators import JacketsWomenLocators
 class BasePage():
     def __init__(self, driver, url, timeout=5):
         self.driver = driver
@@ -17,3 +18,6 @@ class BasePage():
             return False
         return True
 
+    def is_expected_element_presented(self,how,what):
+       element = self.driver.find_element(how,what)
+       return element.text

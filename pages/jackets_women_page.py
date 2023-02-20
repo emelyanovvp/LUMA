@@ -8,9 +8,21 @@ from .locators import CartWindowLocators
 from .locators import SuccessfulMessageLOCATORS
 from .cart_page import CartPage
 import time
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.common.exceptions import TimeoutException
 
 
 class JacketsWomenPage(BasePage):
+
+
+    def view_as_list(self):
+        self.driver.find_element(*JacketsWomenLocators.VIEW_AS_LIST_BUTTON).click()
+        return JacketsWomenPage(driver=self.driver,url=self.driver.current_url)
+    def view_as_grid(self):
+        self.driver.find_element(*JacketsWomenLocators.VIEW_AS_GRID_BUTTON).click()
+        return JacketsWomenPage(driver=self.driver,url=self.driver.current_url)
+
     def customer_can_go_to_olivia_jacket_page(self):
         self.driver.find_element(*JacketsWomenLocators.OLIVIA_NAME).click()
         return OliviaJacketPage(driver=self.driver, url=self.driver.current_url)
@@ -48,7 +60,6 @@ class JacketsWomenPage(BasePage):
         time.sleep(3)
         message_element = self.driver.find_element(*SuccessfulMessageLOCATORS.SUCCESS_MESSAGE)
         assert message_element.text == "You added Juno Jacket to your shopping cart.", "Juno jacket not added to cart"
-
     def choose_size_and_colour_then_add_neve_jacket_to_cart(self):
         self.driver.find_element(*JacketsWomenLocators.NEVE_SIZE_XS).click()
         time.sleep(3)
@@ -277,7 +288,6 @@ class JacketsWomenPage(BasePage):
             "Blue button is not clickable"
         assert self.is_element_clickable(*JacketsWomenLocators.JOSIE_COLOR_GRAY),\
             "Gray button is not clickable"
-
     def all_size_and_color_buttons_should_be_clickable_for_stellar_jacket(self):
         assert self.is_element_clickable(*JacketsWomenLocators.STELLAR_SIZE_S), \
             "S button is not clickable"

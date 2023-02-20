@@ -49,8 +49,15 @@ class LoginPageLocators():
     INPUT_PASS = (By.CSS_SELECTOR, "input#pass")
     SIGN_IN = (By.CSS_SELECTOR,"#send2>span")
 class JacketsWomenLocators():
+    TITLE_ELEMENT = (By.CSS_SELECTOR,".page-title>span")
+    SHOPPING_OPTIONS = (By.CSS_SELECTOR,".filter-content>strong")
+    ITEMS_AMOUNT = (By.CSS_SELECTOR,"#toolbar-amount>span")
+
     SHOW_CART_WINDOW = (By.CSS_SELECTOR, ".showcart")
     VIEW_CART_PAGE = (By.CSS_SELECTOR, ".viewcart>span")
+
+    VIEW_AS_GRID_BUTTON = (By.CSS_SELECTOR,".mode-grid")
+    VIEW_AS_LIST_BUTTON = (By.CSS_SELECTOR,".mode-list")
 
     OLIVIA_NAME = (By.CSS_SELECTOR,"a.product-item-link")
     OLIVIA_SIZE_XS = (By.CSS_SELECTOR,"#option-label-size-143-item-166")
@@ -221,4 +228,4 @@ class WomenPageLocators():
     WOMEN_RADIANT_TEE_LINK = (".product-item-link")
     WOMEN_BREATHE_EASY_TANK_LINK = (".product-item-name>a")
     WOMEN_SELENE_YOGA_LINK = (".product-item:nth-child(3) a.product-item-link")
-    DEIRDRE_RELAXED_FIT_LINK = (".product-item:nth-child(4) a.product-item-link")
+    WOMEN_DEIRDRE_LINK = ('.product-item:nth-child(4) a.product-item-link')

@@ -1,5 +1,41 @@
 from .pages.jackets_women_page import JacketsWomenPage
+from .pages.base_page import BasePage
+from .pages.locators import JacketsWomenLocators
 import pytest
+
+@pytest.mark.smoke
+def test_is_expected_page_title_presented(driver):
+    url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
+    page = JacketsWomenPage(driver, url)
+    page.open()
+    assert page.is_expected_element_presented(*JacketsWomenLocators.TITLE_ELEMENT) == 'Jackets', \
+        "Expected title is not presented"
+
+def test_is_element_shopping_options_presented(driver):
+    url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
+    page = JacketsWomenPage(driver, url)
+    page.open()
+    assert page.is_expected_element_presented(*JacketsWomenLocators.SHOPPING_OPTIONS) == "Shopping Options", \
+        "Shopping options is not presented"
+
+def test_is_element_12_items_presented(driver):
+    url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
+    page = JacketsWomenPage(driver, url)
+    page.open()
+    assert page.is_expected_element_presented(*JacketsWomenLocators.ITEMS_AMOUNT) == "12", \
+        "Expected amount is not presented"
+def test_view_as_grid(driver):
+    url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
+    page = JacketsWomenPage(driver, url)
+    page.open()
+    page.view_as_grid()
+    assert "product_list_mode=list" not in driver.current_url, "Grid view button is not presented"
+def test_view_as_list(driver):
+    url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
+    page = JacketsWomenPage(driver, url)
+    page.open()
+    page.view_as_list()
+    assert "product_list_mode=list" in driver.current_url, "List view button is not presented"
 def test_customer_can_go_to_olivia_jacket_page(driver):
     url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
     page = JacketsWomenPage(driver, url)
@@ -109,55 +145,41 @@ def test_all_size_and_color_buttons_should_be_clickable_for_nadia_jacket(driver)
     page = JacketsWomenPage(driver, url)
     page.open()
     page.all_size_and_color_buttons_should_be_clickable_for_nadia_jacket()
-@pytest.mark.smoke
 def test_all_size_and_color_buttons_should_be_clickable_for_jade_jacket(driver):
     url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
     page = JacketsWomenPage(driver, url)
     page.open()
     page.all_size_and_color_buttons_should_be_clickable_for_jade_jacket()
-@pytest.mark.smoke
 def test_all_size_and_color_buttons_should_be_clickable_for_adrienne_jacket(driver):
     url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
     page = JacketsWomenPage(driver, url)
     page.open()
     page.all_size_and_color_buttons_should_be_clickable_for_adrienne_jacket()
-
-@pytest.mark.smoke
 def test_all_size_and_color_buttons_should_be_clickable_for_inez_jacket(driver):
     url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
     page = JacketsWomenPage(driver, url)
     page.open()
     page.all_size_and_color_buttons_should_be_clickable_for_inez_jacket()
-
-@pytest.mark.smoke
 def test_all_size_and_color_buttons_should_be_clickable_for_riona_jacket(driver):
     url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
     page = JacketsWomenPage(driver, url)
     page.open()
     page.all_size_and_color_buttons_should_be_clickable_for_riona_jacket()
-
-@pytest.mark.smoke
 def test_all_size_and_color_buttons_should_be_clickable_for_ingrid_jacket(driver):
     url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
     page = JacketsWomenPage(driver, url)
     page.open()
     page.all_size_and_color_buttons_should_be_clickable_for_ingrid_jacket()
-
-@pytest.mark.smoke
 def test_all_size_and_color_buttons_should_be_clickable_for_augusta_jacket(driver):
     url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
     page = JacketsWomenPage(driver, url)
     page.open()
     page.all_size_and_color_buttons_should_be_clickable_for_augusta_jacket()
-
-@pytest.mark.smoke
 def test_all_size_and_color_buttons_should_be_clickable_for_josie_jacket(driver):
     url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
     page = JacketsWomenPage(driver, url)
     page.open()
     page.all_size_and_color_buttons_should_be_clickable_for_josie_jacket()
-
-@pytest.mark.smoke
 def test_all_size_and_color_buttons_should_be_clickable_for_stellar_jacket(driver):
     url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
     page = JacketsWomenPage(driver, url)
