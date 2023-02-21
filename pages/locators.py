@@ -1,5 +1,9 @@
 from selenium.webdriver.common.by import By
 class BasePageLocators():
+    SELECT_POSITION = (By.CSS_SELECTOR, "#sorter")
+    ASCENDING_DIRECTION_SIGN = (By.CSS_SELECTOR, ".sort-desc")
+    DESCENDING_DIRECTION_SIGN = (By.CSS_SELECTOR, ".sort-asc")
+
     SIGN_IN_LINK = (By.CSS_SELECTOR, ".authorization-link>a")
     CREATE_ACCOUNT_LINK = (By.XPATH, "//a[text()='Create an Account']")
     WOMEN_LINK = (By.CSS_SELECTOR, "#ui-id-4>span:nth-child(2)")
@@ -52,6 +56,7 @@ class JacketsWomenLocators():
     TITLE_ELEMENT = (By.CSS_SELECTOR,".page-title>span")
     SHOPPING_OPTIONS = (By.CSS_SELECTOR,".filter-content>strong")
     ITEMS_AMOUNT = (By.CSS_SELECTOR,"#toolbar-amount>span")
+
 
     SHOW_CART_WINDOW = (By.CSS_SELECTOR, ".showcart")
     VIEW_CART_PAGE = (By.CSS_SELECTOR, ".viewcart>span")

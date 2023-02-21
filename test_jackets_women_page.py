@@ -1,9 +1,46 @@
 from .pages.jackets_women_page import JacketsWomenPage
 from .pages.base_page import BasePage
 from .pages.locators import JacketsWomenLocators
+from .pages.locators import BasePageLocators
 import pytest
 
 @pytest.mark.smoke
+def test_sort_by_ascending_position(driver):
+    url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html?product_list_dir=desc"
+    page = JacketsWomenPage(driver, url)
+    page.open()
+    page.sort_by_ascending_position(*BasePageLocators.ASCENDING_DIRECTION_SIGN)
+    assert "product_list_dir=desc" not in driver.current_url, "Ascending position is not presented"
+@pytest.mark.smoke
+def test_sort_by_descending_position(driver):
+    url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
+    page = JacketsWomenPage(driver, url)
+    page.open()
+    page.sort_by_descending_position(*BasePageLocators.DESCENDING_DIRECTION_SIGN)
+    assert "product_list_dir=desc" in driver.current_url, "Descending position is not presented"
+
+def test_sort_by_product_position(driver):
+    url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
+    page = JacketsWomenPage(driver, url)
+    page.open()
+    page.sort_by_product_position(*BasePageLocators.SELECT_POSITION)
+    assert "product_list_order=name" not in driver.current_url or "product_list_order=price" not in driver.current_url, \
+        "By position selection is not presented"
+
+def test_sort_by_product_price(driver):
+    url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
+    page = JacketsWomenPage(driver, url)
+    page.open()
+    page.sort_by_product_price(*BasePageLocators.SELECT_POSITION)
+    assert "product_list_order=price" in driver.current_url, "By price selection is not presented"
+
+def test_sort_by_product_name(driver):
+    url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
+    page = JacketsWomenPage(driver, url)
+    page.open()
+    page.sort_by_product_name(*BasePageLocators.SELECT_POSITION)
+    assert "product_list_order=name" in driver.current_url, "By name selection is not presented"
+
 def test_is_expected_page_title_presented(driver):
     url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
     page = JacketsWomenPage(driver, url)
