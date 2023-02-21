@@ -1,11 +1,20 @@
 from selenium.webdriver.common.by import By
 class BasePageLocators():
+    TITLE_ELEMENT = (By.CSS_SELECTOR, ".page-title>span")
+    VIEW_AS_GRID_BUTTON = (By.CSS_SELECTOR, ".mode-grid")
+    VIEW_AS_LIST_BUTTON = (By.CSS_SELECTOR, ".mode-list")
     SELECT_POSITION = (By.CSS_SELECTOR, "#sorter")
     ASCENDING_DIRECTION_SIGN = (By.CSS_SELECTOR, ".sort-desc")
     DESCENDING_DIRECTION_SIGN = (By.CSS_SELECTOR, ".sort-asc")
+    SHOPPING_OPTIONS = (By.CSS_SELECTOR, ".filter-content>strong")
+    ITEMS_AMOUNT = (By.CSS_SELECTOR, "#toolbar-amount>span")
+    PROCEED_TO_CHECKOUT = (By.CSS_SELECTOR, "#top-cart-btn-checkout")
 
     SIGN_IN_LINK = (By.CSS_SELECTOR, ".authorization-link>a")
     CREATE_ACCOUNT_LINK = (By.XPATH, "//a[text()='Create an Account']")
+    SHOW_CART_WINDOW = (By.CSS_SELECTOR, ".showcart")
+    VIEW_CART_PAGE = (By.CSS_SELECTOR, ".viewcart>span")
+
     WOMEN_LINK = (By.CSS_SELECTOR, "#ui-id-4>span:nth-child(2)")
     WOMEN_TOPS_LINK = (By.CSS_SELECTOR, "#ui-id-9>span:nth-child(2)")
     WOMEN_TOPS_JACKETS_LINK = (By.CSS_SELECTOR, "#ui-id-11>span")
@@ -53,17 +62,6 @@ class LoginPageLocators():
     INPUT_PASS = (By.CSS_SELECTOR, "input#pass")
     SIGN_IN = (By.CSS_SELECTOR,"#send2>span")
 class JacketsWomenLocators():
-    TITLE_ELEMENT = (By.CSS_SELECTOR,".page-title>span")
-    SHOPPING_OPTIONS = (By.CSS_SELECTOR,".filter-content>strong")
-    ITEMS_AMOUNT = (By.CSS_SELECTOR,"#toolbar-amount>span")
-
-
-    SHOW_CART_WINDOW = (By.CSS_SELECTOR, ".showcart")
-    VIEW_CART_PAGE = (By.CSS_SELECTOR, ".viewcart>span")
-
-    VIEW_AS_GRID_BUTTON = (By.CSS_SELECTOR,".mode-grid")
-    VIEW_AS_LIST_BUTTON = (By.CSS_SELECTOR,".mode-list")
-
     OLIVIA_NAME = (By.CSS_SELECTOR,"a.product-item-link")
     OLIVIA_SIZE_XS = (By.CSS_SELECTOR,"#option-label-size-143-item-166")
     OLIVIA_SIZE_S = (By.CSS_SELECTOR, "#option-label-size-143-item-167")
@@ -193,7 +191,9 @@ class JacketsWomenLocators():
     STELLAR_COLOR_RED = (By.CSS_SELECTOR, "li:nth-child(12) #option-label-color-93-item-58")
     STELLAR_COLOR_YELLOW = (By.CSS_SELECTOR, "li:nth-child(12) #option-label-color-93-item-60")
     BUTTON_ADD_STELLAR_TO_CART = (By.CSS_SELECTOR, "li:nth-child(12) .tocart>span")
-
+class HoodiesWomenLocators():
+    OLIVIA_NAME = (By.CSS_SELECTOR, "a.product-item-link")
+    OLIVIA_SIZE_XS = (By.CSS_SELECTOR, "#option-label-size-143-item-166")
 
 class CartWindowLocators():
     NAME = (By.CSS_SELECTOR,".product-item-name>a")

@@ -1,4 +1,5 @@
 from .base_page import BasePage
+from .locators import BasePageLocators
 from .olivia_jacket_page import OliviaJacketPage
 from .juno_jacket_page import JunoJacketPage
 from .neve_jacket_page import NeveJacketPage
@@ -6,22 +7,9 @@ from .nadia_jacket_page import NadiaJacketPage
 from .locators import JacketsWomenLocators
 from .locators import CartWindowLocators
 from .locators import SuccessfulMessageLOCATORS
-from .cart_page import CartPage
 import time
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.common.exceptions import TimeoutException
-
 
 class JacketsWomenPage(BasePage):
-
-
-    def view_as_list(self):
-        self.driver.find_element(*JacketsWomenLocators.VIEW_AS_LIST_BUTTON).click()
-        return JacketsWomenPage(driver=self.driver,url=self.driver.current_url)
-    def view_as_grid(self):
-        self.driver.find_element(*JacketsWomenLocators.VIEW_AS_GRID_BUTTON).click()
-        return JacketsWomenPage(driver=self.driver,url=self.driver.current_url)
 
     def customer_can_go_to_olivia_jacket_page(self):
         self.driver.find_element(*JacketsWomenLocators.OLIVIA_NAME).click()
@@ -50,7 +38,8 @@ class JacketsWomenPage(BasePage):
         button = self.driver.find_element(*JacketsWomenLocators.BUTTON_ADD_OLIVIA_TO_CART).click()
         time.sleep(5)
         message_element = self.driver.find_element(*SuccessfulMessageLOCATORS.SUCCESS_MESSAGE)
-        assert message_element.text == "You added Olivia Jacket to your shopping cart.", "Olivia jacket not added to cart"
+        return message_element.text
+
     def choose_size_and_colour_then_add_juno_jacket_to_cart(self):
         self.driver.find_element(*JacketsWomenLocators.JUNO_SIZE_S).click()
         time.sleep(3)
@@ -79,12 +68,6 @@ class JacketsWomenPage(BasePage):
         message_element = self.driver.find_element(*SuccessfulMessageLOCATORS.SUCCESS_MESSAGE)
         assert message_element.text == "You added Nadia Elements Shell to your shopping cart.", "Nadia jacket not added to cart"
 
-    def go_to_cart_window(self):
-        self.driver.find_element(*JacketsWomenLocators.SHOW_CART_WINDOW).click()
-        time.sleep(3)
-    def go_to_cart_page_from_cart_window(self):
-        show_cart = self.driver.find_element(*JacketsWomenLocators.VIEW_CART_PAGE).click()
-        return CartPage(driver=self.driver, url=self.driver.current_url)
     def check_jacket_name_in_cart(self):
         name_element = self.driver.find_element(*CartWindowLocators.NAME)
         assert name_element.text == "Olivia 1/4 Zip Light Jacket", "Olivia name is not presented in cart"

@@ -1,17 +1,18 @@
+import time
 from .pages.jackets_women_page import JacketsWomenPage
 from .pages.base_page import BasePage
 from .pages.locators import JacketsWomenLocators
 from .pages.locators import BasePageLocators
 import pytest
 
-@pytest.mark.smoke
+
 def test_sort_by_ascending_position(driver):
     url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html?product_list_dir=desc"
     page = JacketsWomenPage(driver, url)
     page.open()
     page.sort_by_ascending_position(*BasePageLocators.ASCENDING_DIRECTION_SIGN)
     assert "product_list_dir=desc" not in driver.current_url, "Ascending position is not presented"
-@pytest.mark.smoke
+
 def test_sort_by_descending_position(driver):
     url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
     page = JacketsWomenPage(driver, url)
@@ -26,14 +27,12 @@ def test_sort_by_product_position(driver):
     page.sort_by_product_position(*BasePageLocators.SELECT_POSITION)
     assert "product_list_order=name" not in driver.current_url or "product_list_order=price" not in driver.current_url, \
         "By position selection is not presented"
-
 def test_sort_by_product_price(driver):
     url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
     page = JacketsWomenPage(driver, url)
     page.open()
     page.sort_by_product_price(*BasePageLocators.SELECT_POSITION)
     assert "product_list_order=price" in driver.current_url, "By price selection is not presented"
-
 def test_sort_by_product_name(driver):
     url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
     page = JacketsWomenPage(driver, url)
@@ -45,34 +44,56 @@ def test_is_expected_page_title_presented(driver):
     url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
     page = JacketsWomenPage(driver, url)
     page.open()
-    assert page.is_expected_element_presented(*JacketsWomenLocators.TITLE_ELEMENT) == 'Jackets', \
+    assert page.is_expected_element_presented(*BasePageLocators.TITLE_ELEMENT) == 'Jackets', \
         "Expected title is not presented"
 
 def test_is_element_shopping_options_presented(driver):
     url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
     page = JacketsWomenPage(driver, url)
     page.open()
-    assert page.is_expected_element_presented(*JacketsWomenLocators.SHOPPING_OPTIONS) == "Shopping Options", \
+    assert page.is_expected_element_presented(*BasePageLocators.SHOPPING_OPTIONS) == "Shopping Options", \
         "Shopping options is not presented"
 
 def test_is_element_12_items_presented(driver):
     url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
     page = JacketsWomenPage(driver, url)
     page.open()
-    assert page.is_expected_element_presented(*JacketsWomenLocators.ITEMS_AMOUNT) == "12", \
+    assert page.is_expected_element_presented(*BasePageLocators.ITEMS_AMOUNT) == "12", \
         "Expected amount is not presented"
+
 def test_view_as_grid(driver):
     url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
     page = JacketsWomenPage(driver, url)
     page.open()
     page.view_as_grid()
     assert "product_list_mode=list" not in driver.current_url, "Grid view button is not presented"
+
 def test_view_as_list(driver):
     url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
     page = JacketsWomenPage(driver, url)
     page.open()
     page.view_as_list()
     assert "product_list_mode=list" in driver.current_url, "List view button is not presented"
+@pytest.mark.smoke
+def test_go_to_cart_window_after_adding_item_to_cart(driver):
+    url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
+    page = JacketsWomenPage(driver, url)
+    page.open()
+    page.choose_size_and_colour_then_add_olivia_jacket_to_cart()
+    time.sleep(3)
+    assert page.can_see_cart_window() == "Proceed to Checkout", "Cart window is not presented"
+@pytest.mark.smoke
+def test_can_go_to_cart_page_from_cart_window(driver):
+    url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
+    page = JacketsWomenPage(driver, url)
+    page.open()
+    page.choose_size_and_colour_then_add_olivia_jacket_to_cart()
+    time.sleep(3)
+    page.can_see_cart_window()
+    time.sleep(3)
+    page.go_to_cart_page_from_cart_window()
+    assert "cart" in driver.current_url, "Cart window is not presented"
+
 def test_customer_can_go_to_olivia_jacket_page(driver):
     url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
     page = JacketsWomenPage(driver, url)
