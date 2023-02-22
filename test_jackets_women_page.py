@@ -6,6 +6,68 @@ from .pages.locators import BasePageLocators
 import pytest
 
 
+def test_all_style_types_should_be_clickable(driver):
+    url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
+    page = JacketsWomenPage(driver, url)
+    page.open()
+    page.all_style_types_should_be_clickable()
+
+def test_all_size_types_should_be_clickable(driver):
+    url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
+    page = JacketsWomenPage(driver, url)
+    page.open()
+    page.all_size_types_should_be_clickable()
+
+def test_all_price_types_should_be_clickable(driver):
+    url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
+    page = JacketsWomenPage(driver, url)
+    page.open()
+    page.all_price_types_should_be_clickable()
+
+def test_all_color_types_should_be_clickable(driver):
+    url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
+    page = JacketsWomenPage(driver, url)
+    page.open()
+    page.all_color_types_should_be_clickable()
+
+def test_all_material_types_should_be_clickable(driver):
+    url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
+    page = JacketsWomenPage(driver, url)
+    page.open()
+    page.all_material_types_should_be_clickable()
+
+def test_all_eco_types_should_be_clickable(driver):
+    url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
+    page = JacketsWomenPage(driver, url)
+    page.open()
+    page.all_eco_types_should_be_clickable()
+
+def test_all_performance_types_should_be_clickable(driver):
+    url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
+    page = JacketsWomenPage(driver, url)
+    page.open()
+    page.all_performance_types_should_be_clickable()
+
+@pytest.mark.smoke
+def test_all_erin_types_should_be_clickable(driver):
+    url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
+    page = JacketsWomenPage(driver, url)
+    page.open()
+    page.all_erin_types_should_be_clickable()
+@pytest.mark.smoke
+def test_all_new_types_should_be_clickable(driver):
+    url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
+    page = JacketsWomenPage(driver, url)
+    page.open()
+    page.all_new_types_should_be_clickable()
+@pytest.mark.smoke
+def test_all_sale_types_should_be_clickable(driver):
+    url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
+    page = JacketsWomenPage(driver, url)
+    page.open()
+    page.all_sale_types_should_be_clickable()
+
+
 def test_sort_by_ascending_position(driver):
     url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html?product_list_dir=desc"
     page = JacketsWomenPage(driver, url)
@@ -74,7 +136,7 @@ def test_view_as_list(driver):
     page.open()
     page.view_as_list()
     assert "product_list_mode=list" in driver.current_url, "List view button is not presented"
-@pytest.mark.smoke
+
 def test_go_to_cart_window_after_adding_item_to_cart(driver):
     url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
     page = JacketsWomenPage(driver, url)
@@ -82,7 +144,7 @@ def test_go_to_cart_window_after_adding_item_to_cart(driver):
     page.choose_size_and_colour_then_add_olivia_jacket_to_cart()
     time.sleep(3)
     assert page.can_see_cart_window() == "Proceed to Checkout", "Cart window is not presented"
-@pytest.mark.smoke
+
 def test_can_go_to_cart_page_from_cart_window(driver):
     url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
     page = JacketsWomenPage(driver, url)
