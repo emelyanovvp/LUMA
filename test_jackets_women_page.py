@@ -47,25 +47,37 @@ def test_all_performance_types_should_be_clickable(driver):
     page = JacketsWomenPage(driver, url)
     page.open()
     page.all_performance_types_should_be_clickable()
-
-@pytest.mark.smoke
 def test_all_erin_types_should_be_clickable(driver):
     url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
     page = JacketsWomenPage(driver, url)
     page.open()
     page.all_erin_types_should_be_clickable()
-@pytest.mark.smoke
+
 def test_all_new_types_should_be_clickable(driver):
     url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
     page = JacketsWomenPage(driver, url)
     page.open()
     page.all_new_types_should_be_clickable()
-@pytest.mark.smoke
+
 def test_all_sale_types_should_be_clickable(driver):
     url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
     page = JacketsWomenPage(driver, url)
     page.open()
     page.all_sale_types_should_be_clickable()
+@pytest.mark.smoke
+def test_all_pattern_types_should_be_clickable(driver):
+    url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
+    page = JacketsWomenPage(driver, url)
+    page.open()
+    page.all_pattern_types_should_be_clickable()
+@pytest.mark.smoke
+def test_all_climate_types_should_be_clickable(driver):
+    url = "https://magento.softwaretestingboard.com/women/tops-women/jackets-women.html"
+    page = JacketsWomenPage(driver, url)
+    page.open()
+    page.all_climate_types_should_be_clickable()
+
+
 
 
 def test_sort_by_ascending_position(driver):

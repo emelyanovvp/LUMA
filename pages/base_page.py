@@ -192,3 +192,23 @@ class BasePage():
             "Yes link is not clickable"
         assert self.is_element_clickable(*BasePageLocators.SALE_NO), \
             "No link is not clickable"
+    def all_pattern_types_should_be_clickable(self):
+        self.driver.find_element(*BasePageLocators.PATTERN_FILTER).click()
+        time.sleep(3)
+        assert self.is_element_clickable(*BasePageLocators.PATTERN_COLOR_BLOCKED), \
+            "Color-blocked link is not clickable"
+        assert self.is_element_clickable(*BasePageLocators.PATTERN_SOLID), \
+            "Solid link is not clickable"
+    def all_climate_types_should_be_clickable(self):
+        self.driver.find_element(*BasePageLocators.CLIMATE_FILTER).click()
+        time.sleep(3)
+        assert self.is_element_clickable(*BasePageLocators.CLIMATE_ALL_WEATHER), \
+            "All-weather link is not clickable"
+        assert self.is_element_clickable(*BasePageLocators.CLIMATE_COLD), \
+            "Cold link is not clickable"
+        assert self.is_element_clickable(*BasePageLocators.CLIMATE_COOL), \
+            "Cool link is not clickable"
+        assert self.is_element_clickable(*BasePageLocators.CLIMATE_INDOOR), \
+            "Indoor link is not clickable"
+        assert self.is_element_clickable(*BasePageLocators.CLIMATE_MILD), \
+            "Mild link is not clickable"

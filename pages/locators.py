@@ -84,7 +84,15 @@ class BasePageLocators():
     SALE_NO = (By.CSS_SELECTOR,".filter-options-item:nth-child(10)>.filter-options-content>ol>li:nth-child(2)>a")
 
     PATTERN_FILTER = (By.CSS_SELECTOR, ".filter-options-item:nth-child(11)>.filter-options-title")
+    PATTERN_COLOR_BLOCKED = (By.CSS_SELECTOR,".filter-options-item:nth-child(11)>.filter-options-content>ol>li:nth-child(1)>a")
+    PATTERN_SOLID = (By.CSS_SELECTOR,".filter-options-item:nth-child(11)>.filter-options-content>ol>li:nth-child(2)>a")
+
     CLIMATE_FILTER = (By.CSS_SELECTOR, ".filter-options-item:nth-child(12)>.filter-options-title")
+    CLIMATE_ALL_WEATHER = (By.CSS_SELECTOR,".filter-options-item:nth-child(12)>.filter-options-content>ol>li:nth-child(1)>a")
+    CLIMATE_COLD = (By.CSS_SELECTOR,".filter-options-item:nth-child(12)>.filter-options-content>ol>li:nth-child(2)>a")
+    CLIMATE_COOL = (By.CSS_SELECTOR,".filter-options-item:nth-child(12)>.filter-options-content>ol>li:nth-child(3)>a")
+    CLIMATE_INDOOR = (By.CSS_SELECTOR,".filter-options-item:nth-child(12)>.filter-options-content>ol>li:nth-child(4)>a")
+    CLIMATE_MILD = (By.CSS_SELECTOR,".filter-options-item:nth-child(12)>.filter-options-content>ol>li:nth-child(5)>a")
 
     SIGN_IN_LINK = (By.CSS_SELECTOR, ".authorization-link>a")
     CREATE_ACCOUNT_LINK = (By.XPATH, "//a[text()='Create an Account']")
@@ -134,6 +142,8 @@ class CreateAccountLocators():
     PASSWORD = (By.CSS_SELECTOR, "input#password")
     PASSWORD_CONFIRMATION = (By.CSS_SELECTOR, "input#password-confirmation")
     BUTTON_CREATE_ACCOUNT = (By.CSS_SELECTOR,"button.primary>span")
+    PASSWORD_INFO = (By.CSS_SELECTOR,"div#password-error")
+    PASSWORD_STRENGTH = (By.CSS_SELECTOR,"span#password-strength-meter-label")
 class LoginPageLocators():
     INPUT_EMAIL = (By.CSS_SELECTOR, "input#email")
     INPUT_PASS = (By.CSS_SELECTOR, "input#pass")
